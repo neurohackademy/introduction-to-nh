@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="Introduction to NeuroHackademy, July 30th, 2018">
+		<meta name="author" content="Ariel Rokem">
+
+		<title> Introduction to NeuroHackademy </title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/arokem.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script>
+            function canvas_arrow_two_heads(context, fromx, fromy, tox, toy){
+                let headlen = 10;   // length of head in pixels
+                let angle = Math.atan2(toy-fromy,tox-fromx);
+                context.moveTo(fromx, fromy);
+                context.lineTo(fromx+headlen*Math.cos(angle+Math.PI/6),fromy+headlen*Math.sin(angle+Math.PI/6));
+                context.moveTo(fromx, fromy);
+                context.lineTo(fromx+headlen*Math.cos(angle-Math.PI/6),fromy+headlen*Math.sin(angle-Math.PI/6));
+                context.moveTo(fromx, fromy);
+                context.lineTo(tox, toy);
+                context.lineTo(tox-headlen*Math.cos(angle-Math.PI/6),toy-headlen*Math.sin(angle-Math.PI/6));
+                context.moveTo(tox, toy);
+                context.lineTo(tox-headlen*Math.cos(angle+Math.PI/6),toy-headlen*Math.sin(angle+Math.PI/6));}
+		</script>
+
+	</head>
+	<body>
+	<div class="reveal">
+	<div class="slides">
+
+	<section>
+		<img src="img/eScience.png" height="100px" alt="eScience logo" align="middle">
+
+		<br>July 30th, 2018
+		<em>
+		<h2> NeuroHackademy </h2>
+		</em>
+		<br>
+		<p><a href="http://arokem.org">Ariel Rokem</a>,
+		<a href="http://escience.washington.edu">University of Washington eScience Institute</a> </p>
+		<p>  <small>Follow along at: <t><a href="https://neurohackademy.github.io/introduction-to-nh/">https://neurohackademy.github.io/introduction-to-nh/</t></a></small></p>
+		<img src="img/cc-by.png" height="30px" alt="License" align="middle">
+	</section>
+
+	<section data-background-image="./img/rainier.jpg" data-background-size="cover">
+		<blockquote  style="background: rgba(255, 255, 255, 0);">
+			<p style="color:#FFFFFF";>The era of brain observatories</p>
+		</blockquote>
+	</section>
+
+	<section data-background-image="./img/radio-astronomy-survey.png" data-background-size="cover">
+		<blockquote  style="background: rgba(255, 255, 255, 0);">
+			<p style="color:#FFFFFF";>The era of brain observatories</p>
+		</blockquote>
+	</section>
+
+
+	<section data-background-video="./img/allen_institute_spinning_cells.mp4" data-background-size="cover">
+		<blockquote  style="background: rgba(255, 255, 255, 0);">
+			<p style="color:#FFFFFF";>Allen Institute for Brain Science</p>
+		</blockquote>
+	</section>
+
+	<section data-background-image="./img/hcplogo1.jpg" data-background-size="600px">
+		<p style="position: absolute; left:760px; top:400px;"; >n=1,200</p>
+	</section>
+
+	<section>
+		<div>
+		<img src="img/child-mind-institute-hbn-logo.jpg">
+		<br>
+		n=~10,000
+		</div>
+		<div class="fragment">
+		<img src="img/abcd-logo.png">
+		<br>
+		n=~10,000
+		</div>
+	</section>
+	<section data-background-image="./img/UKBiobank_Brain_Imaging.001.jpeg" data-background-size="500px" data-background-color="black">
+		<p style="position: absolute; left:760px; top:600px;"; >n=500,000</p>
+	</section>
+
+	<section>
+		<h2>Opportunities</h2>
+		<p class="fragment">New data sets will enable important new discoveries</p>
+		<p class="fragment">New methods</p>
+		<p class="fragment">Data-driven discovery</p>
+	</section>
+
+	<section>
+		<h2>Challenges</h2>
+		<p class="fragment">Methods that work in standard use may not apply to large datasets</p>
+		<p class="fragment">Algorithms are needed to extract information from complex high-dimensional data</p>
+		<p class="fragment">Sociotechnical structures are strained: collaboration, publication, training</p>
+	</section>
+
+	<section data-background-image="./img/portage-bay.jpg" data-background-size="cover" style="background: rgba(255, 255, 255, 0.8);">
+		<blockquote>
+			<img src="img/eScience.png" width="800px">
+			<small><em>"All across our campus, the process of discovery will increasingly rely on researchers’ ability to extract knowledge from vast amounts of data... In order to remain at the forefront, UW must be a leader in advancing these techniques and technologies, and in making [them] accessible to researchers in the broadest imaginable range of fields"</em></small>
+		</blockquote>
+	</section>
+
+	<section>
+		<h2><a href="http://neurohackademy.org/">Neurohackademy</a></h2>
+		<br>
+		A Summer Institute in Neuroscience and Data Science
+		<img src="img/joy_of_hacking.png" height="400">
+
+	</section>
+
+	<section>
+
+		<h2> Thanks! </h2>
+		<div style="position: absolute; left:100px; top:100px;" align="left">
+		</div>
+
+		<div style="position: absolute; left:500px; top:80px;">
+			<img src="img/msdse-sponsors.png" height="100px">
+			<br>
+			<img src="img/nimh-logo.gif" height="100px">
+			<br>
+			<img src="img/nsf-logo.jpeg" height="100px">
+			<br>
+			<img src="img/uwin-logo.jpg" height="80px">
+			<img src="img/eScience.png" height="80px">
+		</div>
+
+	</section>
+
+	<section>
+
+			<div style="position:absolute; left: 200px; top:-120px;">
+			<h2>Contact information</h2>
+			</div>
+			<div style="position:absolute; left: 220px; top:-50px;">
+			<img src="img/globe-xxl.png" width="100px;" >
+			<div style="position:absolute; left: 120px; top:40px;">http://arokem.org
+			</div>
+			</div>
+			<div style="position:absolute; left: 220px; top:70px;">
+			<img src="img/email-11-xxl.png" width="100px;" >
+			<div style="position:absolute; left: 120px; top:40px;">arokem@gmail.com
+			</div>
+			</div>
+			<div style="position:absolute; left: 220px; top:190px;">
+			<img src="img/twitter-xxl.png" width="100px;" >
+			<div style="position:absolute; left: 120px; top:40px;">@arokem
+			</div>
+			</div>
+			<div style="position:absolute; left: 220px; top:310px;">
+			<img src="img/github-6-xxl.png" width="100px;" >
+			<div style="position:absolute; left: 120px; top:40px;">github.com/arokem
+			</div>
+			</div>
+
+	</section>
+
+	</div>
+	</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				controls: false,
+				progress: true,
+				center: true,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+	</body>
+</html>
